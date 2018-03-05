@@ -8,5 +8,5 @@
 
 <h1>All Students</h1>
 <%= @students.each do |student| %>
-  <%= render 'students/student', { student: student } if !@students.empty? %>
+  <%= render 'students/student', { student: student } %>
 <% end %>
