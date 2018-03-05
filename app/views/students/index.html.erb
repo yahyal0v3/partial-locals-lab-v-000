@@ -1,0 +1,13 @@
+<h1>Search Students</h1>
+<%= form_tag students_path, method: "post" do %>
+  <%= text_field_tag :search %>
+<% end %>
+<br>
+<%= render 'students/student', { student: @student } if @student %>
+
+<br><br>
+
+<h1>All Students</h1>
+<%= @students.each do |student| %>
+<%= render 'students/student', { student: student } %>
+<% end %>
