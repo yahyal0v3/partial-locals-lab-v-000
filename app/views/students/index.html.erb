@@ -6,7 +6,6 @@
 
 <br><br>
 
-<h1>All Students</h1>
 <%= @students.each do |student| %>
-  <%= render 'students/student', { student: student } %>
+  <%= render partial: "student", locals: {student: student} %>
 <% end %>
